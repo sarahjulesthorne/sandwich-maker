@@ -4,13 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sandwich Maker</title>
+    <title>The Phantasmagorical Sandwich</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/main.css"/>
 </head>
 <body>
-<h1>Hi!</h1>    
-<button type="button" class="btn btn-danger">Danger</button>
+    <!-- Start of full page container -->
+    <div class="container full-page-container" id="fullPageContainer">
+        <!-- Start of page row -->
+<div class="row">
+  <header class="page-title-container col-12 d-flex" id="pageTitleContainer">
+    <h1>The Phantasmagorical Sandwich</h1>
+  </header> 
+
+
+    <!-- Start of form-container-column -->
+<div class="col-12 d-flex">
+    <form class="w-100">
+
+        <!-- Start of internal form row -->
+        <div class="row">
+            <div class="form-intro-container col-12 d-flex" id="formIntroContainer">
+<h3 class="w-100 text-center">Select My Sandwich</h1>
+<p>Select the checkboxes for each of the options you'd like on your sandwich! Select only one option for bread. Select "No Type-Of-Option" option for each section to empty out your other selections. When you're done creating and want to see your total, just click the Make Sandwich button!</p>
+            </div>
+            <!-- End of form intro container -->
+
+            <!-- Start of breads form group -->
+        <div class="breads-group col-sm-12 col-md-6 col-lg-4 d-flex">
+            <h5 class="w-100 text-center">Breads</h3>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="breads" value="italian" id="italian">
+  <label class="form-check-label" for="italian">
+    Italian With Herbs
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="breads" value="glutenFree" id="glutenFree">
+  <label class="form-check-label" for="glutenFree">
+    Gluten Free/Vegan
+  </label>
+</div>
+<div class="form-check">
+        <input class="form-check-input" type="checkbox" name="breads" value="oat" id="oat">
+        <label class="form-check-label" for="oat">
+          Crusty Honey Oat
+        </label>
+      </div>
+      <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="breads" value="none" id="noBread">
+            <label class="form-check-label" for="noBread">
+              No Bread
+            </label>
+          </div>
+        </div>
+        <!-- End of breads form group -->
+
+        <!-- Start of proteins  form group -->
+        <div class="proteins-group col-sm-12 col-md-6 col-lg-4 d-flex">
+                <h5 class="w-100 text-center">Proteins</h3>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="proteins" value="bacon" id="bacon">
+      <label class="form-check-label" for="bacon">
+        Molasses-cured Homestyle Bacon
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="proteins" value="turkey" id="turkey">
+      <label class="form-check-label" for="turkey">
+        Peppercorn Crusted Smoked Turkey
+      </label>
+    </div>
+    <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="proteins" value="falafel" id="falafel">
+            <label class="form-check-label" for="falafel">
+              Our In-house Falafel
+            </label>
+          </div>
+          <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="proteins" value="none" id="noProtein">
+                <label class="form-check-label" for="noProtein">
+                  No Protein
+                </label>
+              </div>
+            </div>
+            <!-- End of proteins form group -->
+            <!-- Start of chesses form group -->
+        <div class="cheeses-group col-sm-12 col-md-6 col-lg-4 d-flex">
+                <h5 class="w-100 text-center">Cheeses</h3>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="cheeses" value="gruyere" id="gruyere">
+      <label class="form-check-label" for="gruyere">
+        Cranberry and Walnut Gruyere
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="cheeses" value="vegan" id="vegan">
+      <label class="form-check-label" for="vegan">
+        Gluten Free/Vegan
+      </label>
+    </div>
+    <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="cheeses" value="cheddar" id="cheddar">
+            <label class="form-check-label" for="cheddar">
+Aged Vermont Cheddar
+            </label>
+          </div>
+          <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="cheeses" value="none" id="noCheese">
+                <label class="form-check-label" for="noCheese">
+                  No Cheese
+                </label>
+              </div>
+            </div>
+            <!-- End of cheeses form group -->
+            <!-- Start of condiments form group -->
+        <div class="condiments-group col-sm-12 col-md-6 col-lg-4 d-flex">
+                <h5 class="w-100 text-center">Condiments</h3>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="condiments" value="ranch" id="ranch">
+      <label class="form-check-label" for="ranch">
+        Buttermilk Ranch
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="condiments" value="balsamic" id="balsamic">
+      <label class="form-check-label" for="balsamic">
+        Molasses Balsamic Drizzle
+      </label>
+    </div>
+    <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="condiments" value="tzatziki" id="tzatziki">
+            <label class="form-check-label" for="tzatziki">
+                    Tzatziki
+            </label>
+          </div>
+          <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="condiments" value="none" id="noCondiments">
+                <label class="form-check-label" for="noCondiments">
+                  No Condiments
+                </label>
+              </div>
+            </div>
+            <!-- End of Condiments form group -->
+
+            <!-- Start of veggies form group -->
+        <div class="veggies-group col-sm-12 col-md-6 col-lg-4 d-flex">
+                <h5 class="w-100 text-center">Veggies</h3>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="veggies" value="peppers" id="peppers">
+      <label class="form-check-label" for="peppers">
+        Roasted Red Peppers
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="veggies" value="onions" id="onions">
+      <label class="form-check-label" for="onions">
+        Caramelized Onions
+      </label>
+    </div>
+    <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="veggies" value="spinach" id="spinach">
+            <label class="form-check-label" for="spinach">
+              Baby Spinach
+            </label>
+          </div>
+          <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="veggies" value="none" id="noVeggies">
+                <label class="form-check-label" for="noVeggies">
+                  No Veggies
+                </label>
+              </div>
+            </div>
+            <!-- End of Veggies  form group -->
+
+<!-- Start of makeSandwich div   -->
+<div class="make-sandwich-container col-12 d-flex">
+        <button type="button" class="btn btn-primary margin-auto" id="makeSandwichBtn">Make Sandwich</button>
+</div>
+<!-- End of makeSandwich div -->
+
+        </div>
+<!-- End of internal form row -->
+
+    </form>
+
+</div>
+<!-- End of form container column -->
+
+<!-- Total display div -->
+<div class="hideStuff final-total-container col-12" id="finalTotalContainer"></div>
+
+<!-- Sandwich display div -->
+<div class="sandwich-container col-12" id="sandwichContainer"></div>
+
+</div>
+<!-- End of page row -->
+    </div>
+    <!-- End of full page container -->
+    
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
