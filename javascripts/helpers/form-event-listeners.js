@@ -1,27 +1,40 @@
 const checkboxes = Array.from(document.getElementsByClassName('form-check-input'));
 
-
 const formCheckboxListener = () => {
-
-    checkboxes.forEach((checkbox) => {
-checkbox.addEventListener('change', (e) => {
-
-if (e.target.checked && e.target.value !== 'none') {
-console.log(`You unchecked ${e.target.id}`)
+checkboxes.forEach((checkbox) => {
+if (checkbox.checked && checkbox.value !== 'none') {
+    checkbox.addEventListener('change', (e) => {
+        e.preventDefault();
+        console.log(`You unchecked ${checkbox.id}`);
+            })
 }
-else if (e.target.checked && e.target.value === 'none') {
-console.log(`You unselected a none option`);
+else if (checkbox.checked && checkbox.value === 'none') {
+    checkbox.addEventListener('change', (e) => {
+        e.preventDefault();
+        console.log(`You unchecked ${checkbox.id}`);
+            });
+    
+
 }
 else if (checkbox.value !== 'none') {
-console.log(e.target.id)
-}
-else {
-    console.log(e.target.id)
-}
+    checkbox.addEventListener('change', (e) => {
+        e.preventDefault();
+        console.log(`You checked ${checkbox.id}`);
+            });
 
-});
-    })
+
+}
+else if (checkbox.value === 'none') {
+    checkbox.addEventListener('change', (e) => {
+e.preventDefault();
+console.log(`You checked ${checkbox.id}`);
+    });;
+
+
+}
+})
 };
+
 
 
 
