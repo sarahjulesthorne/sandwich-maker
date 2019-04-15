@@ -1,30 +1,28 @@
+import utils from './utils.js';
+
 const checkboxes = Array.from(document.getElementsByClassName('form-check-input'));
 
 const callerFunctions = (e) => {
     if (e.target.checked && e.target.value !== 'none') {
         e.preventDefault();
         console.log(`checked ${e.target.id}`);
-    }
-    else if (e.target.checked && e.target.value === 'none') {
+    } else if (e.target.checked && e.target.value === 'none') {
         e.preventDefault();
-console.log(`checked ${e.target.id}`);
+        console.log(`checked ${e.target.id}`);
+    } else if (!e.target.checked && e.target.value !== 'none') {
+        e.preventDefault();
+        console.log(`unchecked ${e.target.id}`);
+    } else if (!e.target.checked && e.target.value === 'none') {
+        e.preventDefault();
+        console.log(`unchecked ${e.target.id}`);
     }
-        else if (!e.target.checked && e.target.value !== 'none') {
-            e.preventDefault();
-console.log(`unchecked ${e.target.id}`);
-        }
 
-            else if (!e.target.checked && e.target.value === 'none') {
-                e.preventDefault();
-console.log(`unchecked ${e.target.id}`);
-            }
-        
 };
 
 const formCheckboxListener = () => {
-checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', callerFunctions)
-})
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', callerFunctions)
+    })
 };
 
 
@@ -49,7 +47,7 @@ checkboxes.forEach((checkbox) => {
 // caller();
 
 //             });
-    
+
 
 // }
 // else if (checkbox.value !== 'none') {
@@ -75,10 +73,13 @@ checkboxes.forEach((checkbox) => {
 
 
 const sandwichBtnListener = (e) => {
-document.getElementById('makeSandwichBtn').addEventListener('click', (e) => {
-e.preventDefault();
-console.log('Clicked Sandwich Button!');
-});
+    document.getElementById('makeSandwichBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        utils.printToDom('sandwichContainer', 'Clicked Sandwich Button');
+    });
 };
 
-export default {formCheckboxListener, sandwichBtnListener};
+export default {
+    formCheckboxListener,
+    sandwichBtnListener
+};
