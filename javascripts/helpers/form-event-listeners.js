@@ -74,6 +74,11 @@ checkboxes.forEach((checkbox) => {
 // };
 
 
+const sandwichBtnListener = (e) => {
+document.getElementById('makeSandwichBtn').addEventListener('click', (e) => {
+e.preventDefault();
+console.log('Clicked Sandwich Button!');
+});
+};
 
-
-export default {formCheckboxListener};
+export default {formCheckboxListener, sandwichBtnListener};
