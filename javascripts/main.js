@@ -1,4 +1,5 @@
+import listeners from './helpers/form-event-listeners.js';
 const init = () => {
-console.log('Hey there!');
+listeners.formCheckboxListener();
 };
 init();
