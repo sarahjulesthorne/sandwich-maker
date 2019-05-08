@@ -7,11 +7,12 @@ const sampleArray = [{
     itemName: 'Italian',
     itemPrice: 1.25
 }];
-const sampleBread = breads.addBreads('italian');
+const sampleBread = document.getElementById('italian');
+
 const init = () => {
     // listeners.formCheckboxListener();
-    console.log(sampleBread);
-    breads.addBreads('oat');
+console.log(breads.addBreads(sampleBread).ingredientCategory);
+    
     listeners.sandwichBtnListener();
     domStringBuilders.domStringBuilder(sampleArray, 15.00);
 };

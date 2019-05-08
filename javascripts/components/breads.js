@@ -11,14 +11,30 @@ const getBreads = () => {
 
 const breadKeys = Array.from(Object.keys(getBreads()));
 
+const breadsConstructor = (category, name, price) => {
+const ingredient = {
+ingredientCategory: category,
+ingredientName: name,
+ingredientPrice: price
+};
+return ingredient;
+};
+
 const addBreads = (ingredient) => {
-  let breadPrice = '';
+  let callConstructor = {};
+  let category = '';
+  let name = '';
+  let price = '';
+
   breadKeys.forEach((ingredientKey) => {
-    if (ingredientKey === ingredient) {
-      breadPrice = getBreads()[ingredientKey];
+    if (ingredientKey === ingredient.id) {
+      category = ingredient.name;
+      name = ingredient.innerHTML;
+price = getBreads()[ingredientKey];
     }
   });
-  return breadPrice;
+  callConstructor = breadsConstructor(category, name, price);
+  return callConstructor;
 };
 
 export default {
