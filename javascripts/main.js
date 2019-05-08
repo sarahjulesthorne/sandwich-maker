@@ -1,5 +1,6 @@
 import breads from './components/breads.js';
 import domStringBuilders from './helpers/dom-string-builder.js';
+import forms from './helpers/form-interpreter.js';
 import listeners from './helpers/form-event-listeners.js';
 
 const sampleArray = [{
@@ -12,7 +13,7 @@ const sampleBread = document.getElementById('italian');
 const init = () => {
     // listeners.formCheckboxListener();
 console.log(breads.addBreads(sampleBread).ingredientCategory);
-    
+    forms.selectAddFunction(sampleBread);
     listeners.sandwichBtnListener();
     domStringBuilders.domStringBuilder(sampleArray, 15.00);
 };
