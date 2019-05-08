@@ -19,6 +19,4 @@ const addBreads = (ingredient) => {
   });
 };
 
-export default {
-  addBreads,
-};
+export default {addBreads};
