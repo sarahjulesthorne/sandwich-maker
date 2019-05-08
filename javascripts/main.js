@@ -1,9 +1,11 @@
-import breads from './components/breads';
+import breads from './components/breads.js';
 
-// import listeners from './helpers/form-event-listeners.js';
+import listeners from './helpers/form-event-listeners.js';
+const sampleBread = breads.addBreads('italian');
 const init = () => {
     // listeners.formCheckboxListener();
-    console.log(breads.addBreads('glutenFree'));
+    console.log(sampleBread);
+    breads.addBreads('oat');
     listeners.sandwichBtnListener();
 };
 init();

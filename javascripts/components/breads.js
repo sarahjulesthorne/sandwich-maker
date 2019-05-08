@@ -9,14 +9,18 @@ const getBreads = () => {
   return breads;
 };
 
-const breadKeys = Array.from(getBreads().keys);
+const breadKeys = Array.from(Object.keys(getBreads()));
 
 const addBreads = (ingredient) => {
-  breadKeys.forEach((key) => {
-    if (key === ingredient) {
-      return getBreads().key;
+  let breadPrice = '';
+  breadKeys.forEach((ingredientKey) => {
+    if (ingredientKey === ingredient) {
+      breadPrice = getBreads()[ingredientKey];
     }
   });
+  return breadPrice;
 };
 
-export default {addBreads};
+export default {
+  addBreads
+};

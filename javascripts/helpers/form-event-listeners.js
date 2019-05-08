@@ -26,60 +26,60 @@
 // };
 
 
-// // const caller = () => {
-// // formCheckboxListener();
-// // };
+// const caller = () => {
+// formCheckboxListener();
+// };
 
-// // const formCheckboxListener = () => {
-// // checkboxes.forEach((checkbox) => {
-// // if (checkbox.checked && checkbox.value !== 'none') {
-// //     checkbox.addEventListener('change', (e) => {
-// //         e.preventDefault();
-// //         console.log(`You unchecked ${checkbox.id}`);
-// // caller();
-
-// //             })
-// // }
-// // else if (checkbox.checked && checkbox.value === 'none') {
-// //     checkbox.addEventListener('change', (e) => {
-// //         e.preventDefault();
-// //         console.log(`You unchecked ${checkbox.id}`);
-// // caller();
-
-// //             });
-
-
-// // }
-// // else if (checkbox.value !== 'none') {
-// //     checkbox.addEventListener('change', (e) => {
-// //         e.preventDefault();
-// //         console.log(`You checked ${checkbox.id}`);
-// //         caller();
-// //             });
-
-
-// // }
-// // else if (checkbox.value === 'none') {
-// //     checkbox.addEventListener('change', (e) => {
-// // e.preventDefault();
-// // console.log(`You checked ${checkbox.id}`);
-// // caller();
-// //     });;
-
-
-// // }
-// // })
-// // };
-
-
-// const sandwichBtnListener = (e) => {
-//     document.getElementById('makeSandwichBtn').addEventListener('click', (e) => {
+// const formCheckboxListener = () => {
+// checkboxes.forEach((checkbox) => {
+// if (checkbox.checked && checkbox.value !== 'none') {
+//     checkbox.addEventListener('change', (e) => {
 //         e.preventDefault();
-//         utils.printToDom('sandwichContainer', 'Clicked Sandwich Button');
-//     });
+//         console.log(`You unchecked ${checkbox.id}`);
+// caller();
+
+//             })
+// }
+// else if (checkbox.checked && checkbox.value === 'none') {
+//     checkbox.addEventListener('change', (e) => {
+//         e.preventDefault();
+//         console.log(`You unchecked ${checkbox.id}`);
+// caller();
+
+//             });
+
+
+// }
+// else if (checkbox.value !== 'none') {
+//     checkbox.addEventListener('change', (e) => {
+//         e.preventDefault();
+//         console.log(`You checked ${checkbox.id}`);
+//         caller();
+//             });
+
+
+// }
+// else if (checkbox.value === 'none') {
+//     checkbox.addEventListener('change', (e) => {
+// e.preventDefault();
+// console.log(`You checked ${checkbox.id}`);
+// caller();
+//     });;
+
+
+// }
+// })
 // };
 
-// export default {
-//     formCheckboxListener,
-//     sandwichBtnListener
-// };
+
+const sandwichBtnListener = (e) => {
+    document.getElementById('makeSandwichBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(e.target.id);
+    });
+};
+
+export default {
+    // formCheckboxListener,
+    sandwichBtnListener
+};
