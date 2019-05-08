@@ -1,29 +1,29 @@
-import utils from './utils.js';
+// import utils from './utils.js';
 
-const checkboxes = Array.from(document.getElementsByClassName('form-check-input'));
+// const checkboxes = Array.from(document.getElementsByClassName('form-check-input'));
 
-const callerFunctions = (e) => {
-    if (e.target.checked && e.target.value !== 'none') {
-        e.preventDefault();
-        console.log(`checked ${e.target.id}`);
-    } else if (e.target.checked && e.target.value === 'none') {
-        e.preventDefault();
-        console.log(`checked ${e.target.id}`);
-    } else if (!e.target.checked && e.target.value !== 'none') {
-        e.preventDefault();
-        console.log(`unchecked ${e.target.id}`);
-    } else if (!e.target.checked && e.target.value === 'none') {
-        e.preventDefault();
-        console.log(`unchecked ${e.target.id}`);
-    }
+// const callerFunctions = (e) => {
+//     if (e.target.checked && e.target.value !== 'none') {
+//         e.preventDefault();
+//         console.log(`checked ${e.target.id}`);
+//     } else if (e.target.checked && e.target.value === 'none') {
+//         e.preventDefault();
+//         console.log(`checked ${e.target.id}`);
+//     } else if (!e.target.checked && e.target.value !== 'none') {
+//         e.preventDefault();
+//         console.log(`unchecked ${e.target.id}`);
+//     } else if (!e.target.checked && e.target.value === 'none') {
+//         e.preventDefault();
+//         console.log(`unchecked ${e.target.id}`);
+//     }
 
-};
+// };
 
-const formCheckboxListener = () => {
-    checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener('change', callerFunctions)
-    })
-};
+// const formCheckboxListener = () => {
+//     checkboxes.forEach((checkbox) => {
+//         checkbox.addEventListener('change', callerFunctions)
+//     })
+// };
 
 
 // const caller = () => {
@@ -75,11 +75,11 @@ const formCheckboxListener = () => {
 const sandwichBtnListener = (e) => {
     document.getElementById('makeSandwichBtn').addEventListener('click', (e) => {
         e.preventDefault();
-        utils.printToDom('sandwichContainer', 'Clicked Sandwich Button');
+        console.log(e.target.id);
     });
 };
 
 export default {
-    formCheckboxListener,
+    // formCheckboxListener,
     sandwichBtnListener
 };
