@@ -1,3 +1,4 @@
+import interpreter from './form-interpreter.js';
 // import utils from './utils.js';
 
 // const checkboxes = Array.from(document.getElementsByClassName('form-check-input'));
@@ -75,7 +76,7 @@
 const sandwichBtnListener = (e) => {
     document.getElementById('makeSandwichBtn').addEventListener('click', (e) => {
         e.preventDefault();
-        console.log(e.target.id);
+        interpreter.initializeReadOut();
     });
 };
 

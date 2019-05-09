@@ -18,9 +18,9 @@ const domStringBuilder = (selectedArray, finalPrice) => {
   domString += `<tbody>`;
   selectedArray.forEach((ingredient) => {
       domString += `<tr>`;
-      domString += `<td>${ingredient.itemCategory.toUpperCase()}</td>`;
-      domString += `<td>${ingredient.itemName}</td>`;
-      domString += `<td>${ingredient.itemPrice}</td>`;
+      domString += `<td>${ingredient.ingredientCategory.toUpperCase()}</td>`;
+      domString += `<td>${ingredient.ingredientName}</td>`;
+      domString += `<td>$${ingredient.ingredientPrice}</td>`;
       domString += `</tr>`;
   });
   domString += `</tbody>`;

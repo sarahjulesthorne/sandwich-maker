@@ -29,7 +29,7 @@ const addBreads = (ingredient) => {
   breadKeys.forEach((ingredientKey) => {
     if (ingredientKey === ingredient.id) {
       category = ingredient.name;
-      name = ingredient.innerHTML;
+      name = document.querySelector(`label[for=${ingredient.id}]`).innerHTML;
 price = getBreads()[ingredientKey];
     }
   });
