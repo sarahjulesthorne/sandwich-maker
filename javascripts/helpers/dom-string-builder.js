@@ -1,5 +1,7 @@
+//module creates readout to be printed to page when Make Sandwich is clicked
 import util from './utils.js';
 
+//used domString to build up readout of Bootstrap table
 const domStringBuilder = (selectedArray, finalPrice) => {
   let domString = '';
 
