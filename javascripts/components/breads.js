@@ -6,6 +6,7 @@ const breads = {
   oat: 1.25,
   noBread: 0.00
 };
+
 //used to securely transfer data to other functions
 const getBreads = () => {
   return breads;
@@ -16,12 +17,12 @@ const breadKeys = Array.from(Object.keys(getBreads()));
 
 //built constructor separately for cleaner code and use in add function
 const breadsConstructor = (category, name, price) => {
-const ingredient = {
-ingredientCategory: category,
-ingredientName: name,
-ingredientPrice: price
-};
-return ingredient;
+  const ingredient = {
+    ingredientCategory: category,
+    ingredientName: name,
+    ingredientPrice: price
+  };
+  return ingredient;
 };
 
 /*used forEach loop to check if the input passed in matches any of the keys in the category  object
@@ -39,7 +40,7 @@ const addBreads = (ingredient) => {
     if (ingredientKey === ingredient.id) {
       category = ingredient.name;
       name = document.querySelector(`label[for=${ingredient.id}]`).innerHTML;
-price = getBreads()[ingredientKey];
+      price = getBreads()[ingredientKey];
     }
   });
   callConstructor = breadsConstructor(category, name, price);
