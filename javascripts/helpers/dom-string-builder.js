@@ -1,5 +1,7 @@
+//module creates readout to be printed to page when Make Sandwich is clicked
 import util from './utils.js';
 
+//used domString to build up readout of Bootstrap table
 const domStringBuilder = (selectedArray, finalPrice) => {
   let domString = '';
 
@@ -17,11 +19,11 @@ const domStringBuilder = (selectedArray, finalPrice) => {
   domString += `</thead>`;
   domString += `<tbody>`;
   selectedArray.forEach((ingredient) => {
-      domString += `<tr>`;
-      domString += `<td>${ingredient.itemCategory.toUpperCase()}</td>`;
-      domString += `<td>${ingredient.itemName}</td>`;
-      domString += `<td>${ingredient.itemPrice}</td>`;
-      domString += `</tr>`;
+    domString += `<tr>`;
+    domString += `<td>${ingredient.ingredientCategory.toUpperCase()}</td>`;
+    domString += `<td>${ingredient.ingredientName}</td>`;
+    domString += `<td>$${ingredient.ingredientPrice}</td>`;
+    domString += `</tr>`;
   });
   domString += `</tbody>`;
   domString += `</table>`;
